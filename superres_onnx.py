@@ -3,7 +3,7 @@ import tvm
 import onnx
 import numpy as np
 
-onnx_graph = onnx.load('super_resolution.onnx')
+onnx_graph = onnx.load('data/super_resolution.onnx')
 # we can load the graph as NNVM compatible model
 sym, params = nnvm.frontend.from_onnx(onnx_graph)
 
@@ -12,7 +12,7 @@ sym, params = nnvm.frontend.from_onnx(onnx_graph)
 # ---------------------------------------------
 # A single cat dominates the examples!
 from PIL import Image
-im_path = 'images/cat.jpg'
+im_path = 'data/cat.png'
 img = Image.open(im_path).resize((224, 224))
 img_ycbcr = img.convert("YCbCr")  # convert to YCbCr
 img_y, img_cb, img_cr = img_ycbcr.split()
