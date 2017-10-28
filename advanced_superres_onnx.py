@@ -7,7 +7,7 @@ import nnvm.compiler
 from tvm.contrib import graph_runtime
 
 rescale_factor = 4
-input_name = "woman"
+input_name = "butterfly"
 im_path = 'data/srresnet/%s_LR.png' % input_name
 bicubic_im_path = 'data/srresnet/%s_bicubic.png' % input_name
 

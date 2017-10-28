@@ -1,29 +1,8 @@
-"""
-Compile MXNet Models
-====================
-**Author**: `Joshua Z. Zhang <https://zhreshold.github.io/>`_
-
-This article is an introductory tutorial to deploy mxnet models with NNVM.
-
-For us to begin with, mxnet module is required to be installed.
-
-A quick solution is
-```
-pip install mxnet --user
-```
-or please refer to offical installation guide.
-https://mxnet.incubator.apache.org/versions/master/install/index.html
-"""
-# some standard imports
 import mxnet as mx
 import nnvm
 import tvm
 import numpy as np
 
-######################################################################
-# Download Resnet18 model from Gluon Model Zoo
-# ---------------------------------------------
-# In this section, we download a pretrained imagenet model and classify an image.
 from mxnet.gluon.model_zoo.vision import get_model
 from mxnet.gluon.utils import download
 from PIL import Image
@@ -32,14 +11,8 @@ from matplotlib import pyplot as plt
 for model in ["resnet18_v1", "alexnet", "resnet50_v1"]:
     print("Testing model %s" % model)
     block = get_model(model, pretrained=True)
-    img_name = 'cat.jpg'
-    synset_url = ''.join(['https://gist.githubusercontent.com/zhreshold/',
-                          '4d0b62f3d01426887599d4f7ede23ee5/raw/',
-                          '596b27d23537e5a1b5751d2b0481ef172f58b539/',
-                          'imagenet1000_clsid_to_human.txt'])
-    synset_name = 'synset.txt'
-    download('https://github.com/dmlc/mxnet.js/blob/master/data/cat.png?raw=true', img_name)
-    download(synset_url, synset_name)
+    img_name = 'data/cat.png'
+    synset_name = 'data/synset.txt'
     with open(synset_name) as f:
         synset = eval(f.read())
     image = Image.open(img_name).resize((224, 224))
