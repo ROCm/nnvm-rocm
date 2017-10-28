@@ -1,3 +1,9 @@
+"""
+A simple 4 layer image super-resolution network in ONNX format
+This was taken from the official NNVM tutorial at http://nnvm.tvmlang.org/tutorials/from_onnx.html#sphx-glr-tutorials-from-onnx-py
+
+"""
+
 import nnvm
 import tvm
 import onnx

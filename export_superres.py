@@ -1,3 +1,9 @@
+"""
+This is an example of defining a PyTorch model and exporting it in ONNX format.
+Taken from http://pytorch.org/tutorials/advanced/super_resolution_with_caffe2.html
+
+"""
+
 import io
 import numpy as np
 
@@ -51,5 +57,5 @@ torch_model.train(False)
 x = Variable(torch.randn(batch_size, 1, 224, 224), requires_grad=True)
 torch_out = torch.onnx._export(torch_model,             # model being run
                                x,                       # model input (or a tuple for multiple inputs)
-                               "super_resolution.onnx", # where to save the model (can be a file or file-like object)
+                               "data/super_resolution.onnx", # where to save the model (can be a file or file-like object)
                                export_params=True)      # store the trained parameter weights inside the model file

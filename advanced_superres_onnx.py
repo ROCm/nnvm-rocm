@@ -1,3 +1,16 @@
+"""
+The model is from the paper
+Photo-Realistic Single Image Super-Resolution Using a Generative Adversarial Network
+https://arxiv.org/abs/1609.04802
+
+Pytorch model is exported from
+https://github.com/twtygqyy/pytorch-SRResNet
+
+Images are from the original paper. It is available at
+https://twitter.app.box.com/s/lcue6vlrd01ljkdtdkhmfvk7vtjhetog
+
+"""
+
 import nnvm
 import tvm
 import onnx
