@@ -5,7 +5,6 @@ Test different front-ends for nnvm to run on AMD GPUs using ROCm
 * mxnet_imagenet_inference.py: Runs Gluon Resnet 50 model on a cat image
 * simple_superres_onnx.py: Loads and runs a simple 4 layer image super-resolution network in ONNX format
 * advanced_superres_onnx.py: Loads and runs a state of the art image super-resolution network (SRResnet) in ONNX format
-* srresnet_perf.py: Uses SRResnet model above to benchmark ROCm backend
 * pytorch_export_superres.py: An example of defining a network in PyTorch and exporting it in ONNX format
 
 ## Installation
