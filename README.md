@@ -7,6 +7,8 @@ Test different front-ends for nnvm to run on AMD GPUs using ROCm
 * advanced_superres_onnx.py: Loads and runs a state of the art image super-resolution network (SRResnet) in ONNX format
 * pytorch_export_superres.py: An example of defining a network in PyTorch and exporting it in ONNX format
 
+Also checkout [this](https://github.com/masahi/nnvm-vision-demo) repository for more examples of running interesting networks on AMDGPUs .
+
 ## Installation
 
 In order to use ROCm backend, you need to build TVM with LLVM 5.0 or higher. You also need to have LLD linker installed and ld.lld command should be on your PATH. If your ld.lld is installed as ld.lld-5.0, you need to sym link it to ld.lld.
