@@ -7,7 +7,7 @@ Test different front-ends for nnvm to run on AMD GPUs using ROCm
 * advanced_superres_onnx.py: Loads and runs a state of the art image super-resolution network (SRResnet) in ONNX format
 * pytorch_export_superres.py: An example of defining a network in PyTorch and exporting it in ONNX format
 
-Also checkout [this](https://github.com/masahi/nnvm-vision-demo) repository for more examples of running interesting networks on AMDGPUs .
+The directory vision-demo has more examples of running interesting networks on AMDGPUs .
 
 ## Installation
 
